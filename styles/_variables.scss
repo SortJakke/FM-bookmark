@@ -1,0 +1,96 @@
+$Blue600: hsl(231, 60%, 57%);
+$Red400: hsl(0, 50%, 50%);
+$Grey50: hsl(0, 0%, 97%);
+$Grey600: hsl(206, 7%, 44%);
+$Blue950: hsl(229, 31%, 21%);
+
+$overlay: hsla(229, 31%, 21%, 0.95);
+
+$font: 400 18px "Rubik", sans-serif;
+
+.button-blue {
+  display: block;
+  padding: 0.7rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: $Grey50;
+  background-color: $Blue600;
+  border: 2px solid $Blue600;
+  border-radius: 5px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $Blue600;
+  }
+}
+.button-grey {
+  padding: 0.7rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: $Blue950;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  &:hover,
+  &:focus {
+    border-color: $Blue950;
+  }
+}
+.button-red {
+  height: fit-content;
+  padding: 0.7rem 0;
+  text-align: center;
+  font-size: 1rem;
+  color: $Grey50;
+  background-color: $Red400;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $Grey50;
+    border-color: $Red400;
+    color: $Red400;
+  }
+}
+
+@mixin bottom_bar($bar-color) {
+  &::after {
+    content: "";
+    display: block;
+    margin-top: 5px;
+    margin-left: 25%;
+    width: 0;
+    height: 3px;
+    background-color: $bar-color;
+    border: none;
+    transition: width 0.3s ease;
+  }
+
+  &:focus::after,
+  &:hover::after {
+    width: 50%;
+  }
+}
+
+@mixin paragraph() {
+  & {
+    font-size: 1rem;
+    color: $Grey600;
+    line-height: 1.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      justify-self: center;
+      max-width: 600px;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+  }
+}

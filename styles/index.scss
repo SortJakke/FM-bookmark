@@ -1,0 +1,55 @@
+@import "./variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::before{
+  content: "";
+  display: block;
+  height: 125px;
+}
+
+body {
+  background-color: $Grey50;
+  font: $font;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+main{
+  display: grid;
+  gap: 100px;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  outline: none;
+}
+
+@media screen and (min-width: 992px) {
+  body::before {
+    height: 200px
+  }
+  
+}
+
+@import "./header";
+@import "./showcase";
+@import "./features.scss";
+@import "./extensions";
+@import "./questions";
+@import "./subscribe";
+@import "./footer";

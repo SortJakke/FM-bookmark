@@ -1,0 +1,100 @@
+footer {
+  background-color: $Blue950;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+
+  .footer__logo {
+    @include bottom_bar($Grey50);
+  }
+  .footer-nav {
+    &__list {
+      display: grid;
+      gap: 1.5rem;
+      list-style: none;
+      font-size: 1rem;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0;
+    }
+    &__link {
+      color: $Grey50;
+      @include bottom_bar($Grey50);
+    }
+  }
+  .socials {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    &__link {
+      color: $Grey50;
+      font-size: 30px;
+
+      &:hover,
+      &:focus {
+        color: $Red400;
+      }
+    }
+  }
+  .attribution {
+    border-top: 1px solid $Grey50;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.875rem;
+    color: $Grey50;
+  }
+  .attribution a {
+    color: $Red400;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+
+    .footer__logo {
+      margin-left: 0;
+    }
+    .footer-nav {
+      &__list {
+        margin: 0;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 2rem;
+      }
+      &__link {
+        text-align: left;
+
+        &:hover,
+        &:focus {
+          color: $Red400;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .socials {
+      margin-left: auto;
+
+      &__link {
+        font-size: 1.5rem;
+      }
+    }
+    .attribution {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free."/>
+    <meta
+      name="keywords"
+      content="Bookmark, Bookmark manager, Bookmark extension, Bookmark app, Bookmark website"
+    />
+    <meta name="author" content="Sortjakke" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bookmark landing page" />
+    <meta
+      property="og:description"
+      content="A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free." />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Bookmark landing page</title>
+
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a
+        class="logo"
+        href="#"
+        aria-label="Bookmark logo redirects to home page"
+      >
+        <span class="logo__image"></span>
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-label="Pages menu"
+        aria-haspopup="true"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      <nav class="nav" id="menu" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Features</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Pricing</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contacts</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link login-button">Login</a>
+          </li>
+        </ul>
+        <div class="socials">
+          <a href="#" class="socials__link" aria-label="facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="socials__link" aria-label="twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Showcase -->
+      <section class="showcase">
+        <figure class="showcase__figure">
+          <img loading="lazy" src="./images/illustration-hero.svg" alt="" />
+        </figure>
+        <div class="showcase__text">
+          <h1 class="showcase__heading">a simple bookmark manager</h1>
+          <p class="showcase__paragraph">
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="showcase__buttons-group">
+            <button type="button" class="button-blue showcase__button">
+              Get It on Chrome
+            </button>
+            <button type="button" class="button-grey showcase__button">
+              Get It on Firefox
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="features">
+        <h2 class="features__heading">Features</h2>
+        <p class="features__paragraph">
+          Our aim is to make it quick and easy for you to access your favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+        <div class="features__tabs-switcher">
+          <ul class="nav features__nav-tab" id="features" role="tablist">
+            <li class="features-option" role="presentation">
+              <button
+                type="button"
+                class="features__button active"
+                role="tab"
+                aria-selected="true"
+                aria-controls="bookmarking"
+                id="bookmarking-tab"
+                tabindex="0"
+                data-bs-toggle="tab"
+                data-bs-target="#bookmarking"
+              >
+                Simple Bookmarking
+              </button>
+            </li>
+            <li class="features-option" role="presentation">
+              <button
+                type="button"
+                class="features__button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="searching"
+                id="searching-tab"
+                tabindex="-1"
+                data-bs-toggle="tab"
+                data-bs-target="#searching"
+              >
+                Speedy Searching
+              </button>
+            </li>
+            <li class="features-option" role="presentation">
+              <button
+                type="button"
+                class="features__button features__button--last"
+                role="tab"
+                aria-selected="false"
+                aria-controls="sharing"
+                id="sharing-tab"
+                tabindex="-1"
+                data-bs-toggle="tab"
+                data-bs-target="#sharing"
+              >
+                Easy Sharing
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content features__tab-content">
+            <div
+              class="tab-pane fade show active features__tab-item"
+              id="bookmarking"
+            >
+              <div class="features__tab-container">
+                <figure class="features__figure features__figure--first">
+                  <img loading="lazy" src="./images/illustration-features-tab-1.svg" alt="" />
+                </figure>
+                <div class="features__tab-text">
+                  <h2 class="features__tab-heading">Bookmark in one click</h2>
+                  <p class="features__tab-paragraph">
+                    Organize your bookmarks however you like. Our simple
+                    drag-and-drop interface gives you complete control over how
+                    you manage your favourite sites.
+                  </p>
+                  <button
+                    type="button"
+                    class="button-blue features__tab-button"
+                  >
+                    More info
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade features__tab-item" id="searching">
+              <div class="features__tab-container">
+                <figure class="features__figure">
+                  <img loading="lazy" src="./images/illustration-features-tab-2.svg" alt="" />
+                </figure>
+                <div class="features__tab-text">
+                  <h2 class="features__tab-heading">Intelligent search</h2>
+                  <p class="features__tab-paragraph">
+                    Our powerful search feature will help you find saved sites
+                    in no time at all. No need to trawl through all of your
+                    bookmarks.
+                  </p>
+                  <button
+                    type="button"
+                    class="button-blue features__tab-button"
+                  >
+                    More info
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade features__tab-item" id="sharing">
+              <div class="features__tab-container">
+                <figure class="features__figure">
+                  <img loading="lazy" src="./images/illustration-features-tab-3.svg" alt="" />
+                </figure>
+                <div class="features__tab-text">
+                  <h2 class="features__tab-heading">Share your bookmarks</h2>
+                  <p class="features__tab-paragraph">
+                    Easily share your bookmarks and collections with others.
+                    Create a shareable link that you can send at the click of a
+                    button.
+                  </p>
+                  <button
+                    type="button"
+                    class="button-blue features__tab-button"
+                  >
+                    More info
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Extension -->
+      <section class="extensions">
+        <h2 class="extensions__heading">Download the extension</h2>
+        <p class="extensions__paragraph">
+          We’ve got more browsers in the pipeline. Please do let us know if
+          you’ve got a favourite you’d like us to prioritize.
+        </p>
+        <div class="extensions__cards-group">
+          <div class="extensions__card">
+            <figure class="extensions__figure">
+              <img loading="lazy" src="./images/logo-chrome.svg" alt="Chrome" />
+            </figure>
+            <div class="extensions__text">
+              <h5 class="extensions__heading">Add to Chrome</h5>
+              <p class="extensions__paragraph">Minimum version 62</p>
+              <span class="dots"></span>
+              <a href="#" class="button-blue extensions__button">
+                add & install extensions
+              </a>
+            </div>
+          </div>
+          <div class="extensions__card">
+            <figure class="extensions__figure">
+              <img loading="lazy" src="./images/logo-firefox.svg" alt="Firefox" />
+            </figure>
+            <div class="extensions__text">
+              <h5 class="extensions__heading">Add to Firefox</h5>
+              <p class="extensions__paragraph">Minimum version 55</p>
+              <span class="dots"></span>
+              <a href="#" class="button-blue extensions__button">
+                add & install extensions
+              </a>
+            </div>
+          </div>
+          <div class="extensions__card">
+            <figure class="extensions__figure">
+              <img loading="lazy" src="./images/logo-opera.svg" alt="Opera" />
+            </figure>
+            <div class="extensions__text">
+              <h5 class="extensions__heading">Add to Opera</h5>
+              <p class="extensions__paragraph">Minimum version 46</p>
+              <span class="dots"></span>
+              <a href="#" class="button-blue extensions__button">
+                add & install extensions
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Question Accordion -->
+      <section class="questions">
+        <h2 class="questions__heading">Frequently Asked Questions</h2>
+        <p class="questions__paragraph">
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </p>
+        <div class="accordion accordion-flush" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                What is Bookmark?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                tincidunt justo eget ultricies fringilla. Phasellus blandit
+                ipsum quis quam ornare mattis.
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                How can I request a new browser?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                luctus eros aliquet convallis ultricies. Mauris augue massa,
+                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros
+                aliquet convallis ultricies. Mauris augue massa, ultricies non
+                ligula. Suspendisse imperdiet.
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Is there a mobile app?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Sed consectetur quam id neque fermentum accumsan. Praesent
+                luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                Cras in ligula quis est pharetra mattis sit amet pharetra purus.
+                Sed sollicitudin ex et ultricies bibendum.
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                What about other Chromium browsers?
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                gravida pellentesque non ut velit.
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="button-blue questions__button">More Info</a>
+      </section>
+
+      <!-- Subscribe -->
+      <section class="subscribe">
+        <span class="subscribe__subtitle"> 35,000+ already joined </span>
+        <h2 class="subscribe__title">Stay up-to-date with what we’re doing</h2>
+        <form class="subscribe__form" action="#">
+          <div class="subscribe__input-box">
+            <label for="email" class="subscribe__label">Email address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
+              class="subscribe__email-input"
+            />
+            <span class="subscribe__error-message"
+              >Whoops, make sure it's an email</span
+            >
+            <span class="subscribe__error-icon">
+              <img loading="lazy" src="./images/icon-error.svg" alt="" />
+            </span>
+          </div>
+          <button class="button-red subscribe__submit" type="submit">
+            Contact Us
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <a class="footer__logo" href="#">
+        <img loading="lazy"
+          src="./images/logo-bookmark-light.svg"
+          alt="Bookmark logo redirects to home page"
+        />
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul class="footer-nav__list">
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Features</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Pricing</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="socials">
+        <a href="#" class="socials__link">
+          <i class="bi bi-facebook" role="img" aria-label="facebook"></i>
+        </a>
+        <a href="#" class="socials__link">
+          <i class="bi bi-twitter" role="img" aria-label="twitter"></i>
+        </a>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/SortJakke">Sortjakke</a>.
+    </footer>
+  </body>
+</html>

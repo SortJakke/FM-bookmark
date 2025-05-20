@@ -1,0 +1,72 @@
+.extensions {
+  text-align: center;
+  padding: 1.5rem;
+
+  display: grid;
+  gap: 1rem;
+
+  &__paragraph {
+    @include paragraph();
+  }
+
+  // Cards
+  &__cards-group {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+  }
+  &__card {
+    width: 300px;
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  &__paragraph {
+    @include paragraph();
+  }
+  &__button {
+    margin: 0 1.5rem;
+    padding: 0.7rem 1rem;
+    text-transform: capitalize;
+  }
+
+  .dots {
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/bg-dots.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .extensions {
+    padding: 1.5rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .extensions {
+    // Cards
+    &__cards-group {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    &__card {
+      width: 100%;
+      height: fit-content;
+
+      &:nth-child(2) {
+        margin-top: 2.5rem;
+      }
+      &:nth-child(3) {
+        margin-top: 5rem;
+      }
+    }
+  }
+}
